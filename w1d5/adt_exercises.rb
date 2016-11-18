@@ -38,3 +38,29 @@ class Queue
     elements
   end
 end
+
+class Map
+  attr_reader :pairs
+
+  def initialize
+    @pairs = []
+  end
+
+  def assign(key, value)
+    remove(key)
+    pairs << [key, value]
+  end
+
+  def lookup(target)
+    pairs.each { |key, value| return value if key == target }
+    nil
+  end
+
+  def remove(target)
+    pairs.reject! { |key, _| key == target }
+  end
+
+  def show
+    pairs.each { |key, value| puts "#{key} => #{value}" }
+  end
+end
