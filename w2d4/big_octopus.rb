@@ -24,6 +24,31 @@ def clever_octopus(array)
   largest_string
 end
 
+# return the index of a element
+
+# access in O(n)
+
+# tiles_array = ["up", "right-up", "right", "right-down",
+#               "down", "left-down", "left",  "left-up" ]
+
+def slow_dance(target_tile, tiles_array)
+  tiles_array.each_with_index do |tile, index|
+    return index if target_tile == tile
+  end
+
+  nil
+end
+
+# access in O(1)
+
+# tiles_hash = { "up" => 0, "right-up" => 1, "right"=> 2, "right-down" => 3,
+#                "down" => 4, "left-down" => 5, "left" => 6, "left-up" => 7 }
+
+def fast_dance(direction, tiles_hash)
+  tiles_hash[direction]
+end
+
+
 class Array
   def merge_sort(&prc)
     return self if size <= 1
