@@ -8,5 +8,4 @@
 + w2d1: Simon Implementation
 + w2d2: Mancala Implementation
 + w2d3: Rspec Homework
-
 + w2d4: Least-Recently-Used Cache
