@@ -10,3 +10,6 @@
 + w2d3: Rspec Homework
 + w2d4: Big-O Homework
 + w2d5: Least-Recently-Used Cache
+
+### Week 3
++ w3d1: SQLite3 ORM
