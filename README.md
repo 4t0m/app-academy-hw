@@ -14,3 +14,4 @@
 ### Week 3
 + w3d1: SQLite3 ORM
 + w3d2: Rails DemoProject
++ w3d3: ActiveRecord Exercises 
