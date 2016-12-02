@@ -16,3 +16,7 @@
 + w3d3: Rails DemoProject
 + w3d4: ActiveRecord Homework 
 + w3d5: Metaprogramming Homework
+
+### Week 4
++ w4d1: Rails (Controllers) and HTML (Introduction, Containers) Homework
+
