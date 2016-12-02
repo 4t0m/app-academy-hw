@@ -12,6 +12,7 @@
 + w2d5: Least-Recently-Used Cache
 
 ### Week 3
-+ w3d1: SQLite3 ORM
-+ w3d2: Rails DemoProject
-+ w3d3: ActiveRecord Exercises 
++ w3d2: SQLite3 ORM
++ w3d3: Rails DemoProject
++ w3d4: ActiveRecord Homework 
++ w3d5: Metaprogramming Homework
