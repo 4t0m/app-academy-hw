@@ -6,45 +6,81 @@
   </head>
   <body>
     <h1>Food</h1>
-      <h2>How to Make Food</h2>
-      <header>
-        <img height="75" width="75" src="https://p5.zdassets.com/hc/settings_assets/949671/200252358/3TMJzYYYqSGC63rsxUhMNA-logo-emblem-red.png" alt="App Academy Logo">
-        <nav>
+    <h2>How to Make Food</h2>
+    <header>
+      <img height="75" width="75" src="https://p5.zdassets.com/hc/settings_assets/949671/200252358/3TMJzYYYqSGC63rsxUhMNA-logo-emblem-red.png" alt="App Academy Logo">
+      <nav>
+        <ul>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#ingredients">Ingredients</a></li>
+            <li><a href="#directions">Directions</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h2><a name="description"/>Description</h2>
+      <p>Food is really delicious, and is critical for continuing to live.
+         I absolutely recommend eating food.</p>
+    <section>
+      <aside>
+        <h2><a name="ingredients"/>Ingredients</h2>
           <ul>
-              <li><a href="#description">Description</a></li>
-              <li><a href="#ingredients">Ingredients</a></li>
-              <li><a href="#directions">Directions</a></li>
+            <li>Organic material like plants or animals</li>
+            <li>Tasty crumbled rocks like salt.</li>
           </ul>
-        </nav>
-      </header>
-      <h2><a name="description"/>Description</h2>
-        <p>Food is really delicious, and is critical for continuing to live.
-           I absolutely recommend eating food.</p>
-      <section>
-        <aside>
-          <h2><a name="ingredients"/>Ingredients</h2>
-            <ul>
-              <li>Organic material like plants or animals</li>
-              <li>Tasty crumbled rocks like salt.</li>
-            </ul>
-        </aside>
-        <figure>
-          <img height="300" width="300"
-          src='https://upload.wikimedia.org/wikipedia/commons/6/64/Foods_%28cropped%29.jpg' alt='this is some food'/>
-        </figure>
-        <figcaption><p>For more information about
-        food, you can check out <a href='https://en.wikipedia.org/wiki/Food'>
-        this informative webpage!</a></p></figcaption>
+      </aside>
+      <figure>
+        <img height="300" width="300"
+        src='https://upload.wikimedia.org/wikipedia/commons/6/64/Foods_%28cropped%29.jpg' alt='this is some food'/>
+      </figure>
+      <figcaption><p>For more information about
+      food, you can check out <a href='https://en.wikipedia.org/wiki/Food'>
+      this informative webpage!</a></p></figcaption>
 
-        <h2><a name="directions"/ 2>Directions</h2>
-          <ol>
-            <li>Clean ingedients if they are gross.</li>
-            <li>Put them near fire if they are still gross.</li>
-            <li>Combine ingredients to taste.</li>
-          </ol>
-      </section>
+      <h2><a name="directions"/ 2>Directions</h2>
+        <ol>
+          <li>Clean ingedients if they are gross.</li>
+          <li>Put them near fire if they are still gross.</li>
+          <li>Combine ingredients to taste.</li>
+        </ol>
+    </section>
+
+    <section id="reviews">
+      <h2>Reviews</h2>
+      <form action="/reviews" method="post">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name">
+
+        <label for="rating">Rating</label>
+        1<input type="radio" name="rating" value="1" checked>
+        2<input type="radio" name="rating" value="2">
+        3<input type="radio" name="rating" value="3">
+        4<input type="radio" name="rating" value="4">
+        5<input type="radio" name="rating" value="5">
+
+        <label for="expertise">Cooking Expertise</label>
+
+        <select id="expertise" name="expertise">
+          <option value="Select Cooking Expertise" disabled="true" selected="true">Select Cooking Experise</option>
+
+          <option value="Sometimes Cook">Sometimes Cook</option>
+
+          <option value="Cook Everyday">Cook Everyday</option>
+
+          <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+
+          <option value="Professional Chef">Professional Chef</option>
+        </select>
+
+        <label>Review
+          <textarea name="review" cols="30" rows="10"></textarea>
+        </label>
+
+        <input type="submit" value="Submit Review">
+       </form>
+    </section>
+
     <footer>
-      <p>I came up with this recipe after years of first hand experience with
+      <p>I came up with this recipe after years of first-hand experience with
         eating food.</p>
     </footer>
   </body>
