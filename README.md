@@ -18,5 +18,5 @@
 + w3d5: Metaprogramming Homework
 
 ### Week 4
-+ w4d1: Rails (Controllers) and HTML (Introduction, Containers) Homework
-
++ w4d1: Rails (Controllers)
++ w4d3: Rails Auth Homework
