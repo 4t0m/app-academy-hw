@@ -25,3 +25,6 @@
 ### Week 5
 + w5d3: Intro JavaScript Problems
 + w5d4: Callbacks and Function Calls
+
+### Week 6
++ w6d1: Wacky-Painter jQuery Exercise
