@@ -1,18 +1,16 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #FEFFF1;
-  width: 900px;
+  width: 60%;
   margin: 0 auto;
 }
 
 section {
-  width: 700px;
   display: inline-block;
   vertical-align: top;
 }
 
 aside {
-  width: 180px;
   display: inline-block;
   margin-right: 15px;
 }
@@ -30,7 +28,7 @@ ul li a, figcaption a {
 }
 
 nav {
-  display: inline-block;
+  float: right;
 }
 
 nav li {
@@ -43,6 +41,7 @@ nav li a {
 }
 header > img {
   width: 100px;
+  float: left;
 }
 
 .ingredients-list {
