@@ -28,4 +28,5 @@
 
 ### Week 6
 + w6d1: Wacky-Painter jQuery Exercise
++ w6d2: CSS Homework
 + w6d3: Basic AJAX Exercise
