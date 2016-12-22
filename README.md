@@ -31,3 +31,4 @@
 + w6d2: CSS Homework
 + w6d3: Basic AJAX Exercise
 + w6d4: DOM Manipulation with Vanilla JS
++ w6d5: NPM and React Introductory Exercises
