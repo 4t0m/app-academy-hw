@@ -30,3 +30,4 @@
 + w6d1: Wacky-Painter jQuery Exercise
 + w6d2: CSS Homework
 + w6d3: Basic AJAX Exercise
++ w6d4: DOM Manipulation with Vanilla JS
