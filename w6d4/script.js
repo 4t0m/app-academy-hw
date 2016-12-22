@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- your code here!
 
   const showPhotoForm = (e) => {
-    const photoFormDiv = document.querySelector(".photo-form-container");
-    if (photoFormDiv.className === "photo-form-container") {
-      photoFormDiv.className = "photo-form-container hidden";
+    const photoForm = document.querySelector(".photo-form-container");
+    if (photoForm.className === "photo-form-container") {
+      photoForm.className = "photo-form-container hidden";
     } else {
-      photoFormDiv.className = "photo-form-container";
+      photoForm.className = "photo-form-container";
     }
   };
 
@@ -64,11 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const photoUrl = photoUrlInput.value;
     photoUrlInput.value = "";
 
-    const newImg = document.createElement("img");
-    newImg.src = photoUrl;
+    const newPhoto = document.createElement("img");
+    newPhoto.src = photoUrl;
 
     const newPhotoLi = document.createElement("li");
-    newPhotoLi.appendChild(newImg);
+    newPhotoLi.appendChild(newPhoto);
 
     const dogPhotosList = document.querySelector(".dog-photos");
     dogPhotosList.appendChild(newPhotoLi);
