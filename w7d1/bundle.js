@@ -21653,6 +21653,19 @@
 /***/ function(module, exports) {
 
 	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var selectCurrency = function selectCurrency(baseCurrency, rates) {
+	  return {
+	    type: "SWITCH_CURRENCY",
+	    baseCurrency: baseCurrency,
+	    rates: rates
+	  };
+	};
+	
+	exports.default = selectCurrency;
 
 /***/ },
 /* 181 */
