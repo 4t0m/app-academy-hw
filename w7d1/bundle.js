@@ -22739,7 +22739,15 @@
 	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
 	  var action = arguments[1];
 	
-	  return state; // remove this and fill out the body of the reducer function
+	  switch (action.type) {
+	    case "SWITCH_CURRENCY":
+	      return {
+	        baseCurrency: action.baseCurrency,
+	        rates: action.rates
+	      };
+	    default:
+	      return state;
+	  }
 	};
 	
 	exports.default = reducer;
