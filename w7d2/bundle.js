@@ -71,6 +71,19 @@
 	  var root = document.getElementById('content');
 	  _reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
 	});
+	
+	var addLoggingToDispatch = function addLoggingToDispatch(store) {
+	  return function (next) {
+	    return function (action) {
+	      var storeDispatch = store.dispatch;
+	      console.log(store.getState());
+	      console.log(action);
+	      var returnValue = storeDispatch(action);
+	      console.log(store.getState());
+	      return returnValue;
+	    };
+	  };
+	};
 
 /***/ },
 /* 1 */
