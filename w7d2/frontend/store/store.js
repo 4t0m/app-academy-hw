@@ -7,6 +7,6 @@ const configureStore = (preloadedState = {}) => {
     localStorage.state = JSON.stringify(store.getState());
   });
   return store;
-}
+};
 
 export default configureStore;
