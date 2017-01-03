@@ -58,6 +58,8 @@
 	
 	var _store2 = _interopRequireDefault(_store);
 	
+	var _redux = __webpack_require__(179);
+	
 	var _root = __webpack_require__(290);
 	
 	var _root2 = _interopRequireDefault(_root);
@@ -67,22 +69,35 @@
 	document.addEventListener('DOMContentLoaded', function () {
 	  var preloadedState = localStorage.state ? JSON.parse(localStorage.state) : {};
 	  var store = (0, _store2.default)(preloadedState);
-	
 	  var root = document.getElementById('content');
+	
+	  var newStore = (0, _redux.applyMiddleware)(store, addLoggingToDispatch);
 	  _reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
 	});
 	
 	var addLoggingToDispatch = function addLoggingToDispatch(store) {
 	  return function (next) {
 	    return function (action) {
-	      var storeDispatch = store.dispatch;
-	      console.log(store.getState());
+	      var dispatch = store.dispatch;
 	      console.log(action);
-	      var returnValue = storeDispatch(action);
 	      console.log(store.getState());
-	      return returnValue;
+	      var nextState = dispatch(action);
+	      console.log(store.getState());
+	      return nextState;
 	    };
 	  };
+	};
+	
+	var applyMiddlewares = function applyMiddlewares(store) {
+	  for (var _len = arguments.length, middlewares = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+	    middlewares[_key - 1] = arguments[_key];
+	  }
+	
+	  var dispatch = store.dispatch;
+	  middlewares.forEach(function (middleware) {
+	    dispatch = middleware(store)(dispatch);
+	  });
+	  return Object.assign({}, store, { dispatch: dispatch });
 	};
 
 /***/ },
