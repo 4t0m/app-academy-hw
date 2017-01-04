@@ -22308,9 +22308,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _giphys_index_items = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"giphys_index_items\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	
-	var _giphys_index_items2 = _interopRequireDefault(_giphys_index_items);
+	var _giphys_index_item = __webpack_require__(207);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -22340,7 +22338,7 @@
 	        _react2.default.createElement(
 	          'ul',
 	          null,
-	          (0, _giphys_index_items2.default)(giphys)
+	          (0, _giphys_index_item.giphyIndexItems)(giphys)
 	        )
 	      );
 	    }
@@ -22350,6 +22348,37 @@
 	}(_react.Component);
 	
 	exports.default = GiphysIndex;
+
+/***/ },
+/* 207 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.giphyIndexItems = undefined;
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var giphyIndexItems = exports.giphyIndexItems = function giphyIndexItems(giphys) {
+	  if (giphys) {
+	    return giphys.map(function (giphy, idx) {
+	      return _react2.default.createElement(
+	        'li',
+	        { key: idx, className: 'giphy-li' },
+	        _react2.default.createElement('img', { src: giphy.images.fixed_height.url })
+	      );
+	    });
+	  } else {
+	    return _react2.default.createElement('div', null);
+	  }
+	};
 
 /***/ }
 /******/ ]);
