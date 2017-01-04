@@ -69,7 +69,7 @@
 	document.addEventListener('DOMContentLoaded', function () {
 		var store = (0, _store2.default)();
 		var root = document.getElementById('root');
-		window.fetchSearchGiphys = _api_util.fetchSearchGiphys;
+		// window.fetchSearchGiphys = fetchSearchGiphys;
 		_reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
 	});
 
@@ -20883,11 +20883,25 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.receiveSearchGiphys = exports.RECEIVE_SEARCH_GIPHYS = undefined;
+	
 	var _api_util = __webpack_require__(185);
 	
 	var APIUtil = _interopRequireWildcard(_api_util);
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
+	var RECEIVE_SEARCH_GIPHYS = exports.RECEIVE_SEARCH_GIPHYS = 'RECEIVE_SEARCH_GIPHYS';
+	
+	var receiveSearchGiphys = exports.receiveSearchGiphys = function receiveSearchGiphys(giphys) {
+	    return {
+	        type: RECEIVE_SEARCH_GIPHYS,
+	        giphys: giphys
+	    };
+	};
 
 /***/ },
 /* 185 */
