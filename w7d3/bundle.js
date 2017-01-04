@@ -20880,6 +20880,10 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _giphy_actions = __webpack_require__(184);
 	
 	var GiphysReducer = function GiphysReducer() {
@@ -20893,6 +20897,8 @@
 	      return state;
 	  }
 	};
+	
+	exports.default = GiphysReducer;
 
 /***/ },
 /* 184 */
