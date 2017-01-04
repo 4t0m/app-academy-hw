@@ -22176,6 +22176,10 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _reactRedux = __webpack_require__(187);
 	
 	var _giphys_search = __webpack_require__(205);
@@ -22185,6 +22189,20 @@
 	var _giphy_actions = __webpack_require__(184);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var mapStateToProps = function mapStateToProps(state) {
+	  return {
+	    giphys: state.giphys
+	  };
+	};
+	
+	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	  return { fetchSearchGiphys: function fetchSearchGiphys(searchTerm) {
+	      return dispatch((0, _giphy_actions.fetchSearchGiphys)(searchTerm));
+	    } };
+	};
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_giphys_search2.default);
 
 /***/ },
 /* 205 */
