@@ -64,13 +64,17 @@
 	
 	var _api_util = __webpack_require__(185);
 	
+	var _giphy_actions = __webpack_require__(184);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	document.addEventListener('DOMContentLoaded', function () {
-		var store = (0, _store2.default)();
-		var root = document.getElementById('root');
-		// window.fetchSearchGiphys = fetchSearchGiphys;
-		_reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
+	  var store = (0, _store2.default)();
+	  var root = document.getElementById('root');
+	  window.fetchSearchGiphys = _api_util.fetchSearchGiphys;
+	  window.receiveSearchGiphys = _giphy_actions.receiveSearchGiphys;
+	  window.store = store;
+	  _reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
 	});
 
 /***/ },
@@ -20867,7 +20871,7 @@
 	
 	var _redux = __webpack_require__(160);
 	
-	var _giphys_reducer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./giphys_reducer\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _giphys_reducer = __webpack_require__(183);
 	
 	var _giphys_reducer2 = _interopRequireDefault(_giphys_reducer);
 	
@@ -20878,7 +20882,26 @@
 	});
 
 /***/ },
-/* 183 */,
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _giphy_actions = __webpack_require__(184);
+	
+	var GiphysReducer = function GiphysReducer() {
+	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+	  var action = arguments[1];
+	
+	  switch (action.type) {
+	    case _giphy_actions.RECEIVE_SEARCH_GIPHYS:
+	      return action.giphys;
+	    default:
+	      return state;
+	  }
+	};
+
+/***/ },
 /* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -20887,7 +20910,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.receiveSearchGiphys = exports.RECEIVE_SEARCH_GIPHYS = undefined;
+	exports.fetchSearchGiphys = exports.receiveSearchGiphys = exports.RECEIVE_SEARCH_GIPHYS = undefined;
 	
 	var _api_util = __webpack_require__(185);
 	
@@ -20901,6 +20924,14 @@
 	    return {
 	        type: RECEIVE_SEARCH_GIPHYS,
 	        giphys: giphys
+	    };
+	};
+	
+	var fetchSearchGiphys = exports.fetchSearchGiphys = function fetchSearchGiphys(searchTerm) {
+	    return function (dispatch) {
+	        APIUtil.fetchSearchGiphys(searchTerm).then(function (giphys) {
+	            return dispatch(receiveSearchGiphys(giphys.data));
+	        });
 	    };
 	};
 
