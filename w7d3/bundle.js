@@ -20861,23 +20861,24 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _redux = __webpack_require__(160);
 	
-	var _giphys_reducer = __webpack_require__(183);
+	var _giphys_reducer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./giphys_reducer\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _giphys_reducer2 = _interopRequireDefault(_giphys_reducer);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ },
-/* 183 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
 	
-	var _giphy_actions = __webpack_require__(184);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = (0, _redux.combineReducers)({
+	  giphys: _giphys_reducer2.default
+	});
 
 /***/ },
+/* 183 */,
 /* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
