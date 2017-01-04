@@ -62,8 +62,6 @@
 	
 	var _root2 = _interopRequireDefault(_root);
 	
-	var _api_util = __webpack_require__(185);
-	
 	var _giphy_actions = __webpack_require__(184);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -71,11 +69,12 @@
 	document.addEventListener('DOMContentLoaded', function () {
 	  var store = (0, _store2.default)();
 	  var root = document.getElementById('root');
-	  window.fetchSearchGiphys = _api_util.fetchSearchGiphys;
+	  window.fetchSearchGiphys = _giphy_actions.fetchSearchGiphys;
 	  window.receiveSearchGiphys = _giphy_actions.receiveSearchGiphys;
 	  window.store = store;
 	  _reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
 	});
+	// import { fetchSearchGiphys } from './util/api_util';
 
 /***/ },
 /* 1 */
@@ -20910,7 +20909,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.fetchSearchGiphys = exports.receiveSearchGiphys = exports.RECEIVE_SEARCH_GIPHYS = undefined;
+	exports.fetchSearchGiphys = exports.receiveSearchGiphys = exports.REQUEST_SEARCH_GIPHYS = exports.RECEIVE_SEARCH_GIPHYS = undefined;
 	
 	var _api_util = __webpack_require__(185);
 	
@@ -20919,6 +20918,7 @@
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	var RECEIVE_SEARCH_GIPHYS = exports.RECEIVE_SEARCH_GIPHYS = 'RECEIVE_SEARCH_GIPHYS';
+	var REQUEST_SEARCH_GIPHYS = exports.REQUEST_SEARCH_GIPHYS = 'REQUEST_SEARCH_GIPHYS';
 	
 	var receiveSearchGiphys = exports.receiveSearchGiphys = function receiveSearchGiphys(giphys) {
 	    return {
@@ -20957,6 +20957,10 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -20966,8 +20970,20 @@
 	var _giphys_search_container = __webpack_require__(204);
 	
 	var _giphys_search_container2 = _interopRequireDefault(_giphys_search_container);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Root = function Root(_ref) {
+	  var store = _ref.store;
+	
+	  return _react2.default.createElement(
+	    _reactRedux.Provider,
+	    { store: store },
+	    _react2.default.createElement(_giphys_search_container2.default, null)
+	  );
+	};
+	
+	exports.default = Root;
 
 /***/ },
 /* 187 */
