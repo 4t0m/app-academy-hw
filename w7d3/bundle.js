@@ -62,19 +62,13 @@
 	
 	var _root2 = _interopRequireDefault(_root);
 	
-	var _giphy_actions = __webpack_require__(184);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	document.addEventListener('DOMContentLoaded', function () {
-	  var store = (0, _store2.default)();
-	  var root = document.getElementById('root');
-	  window.fetchSearchGiphys = _giphy_actions.fetchSearchGiphys;
-	  window.receiveSearchGiphys = _giphy_actions.receiveSearchGiphys;
-	  window.store = store;
-	  _reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
+	    var store = (0, _store2.default)();
+	    var root = document.getElementById('root');
+	    _reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
 	});
-	// import { fetchSearchGiphys } from './util/api_util';
 
 /***/ },
 /* 1 */
