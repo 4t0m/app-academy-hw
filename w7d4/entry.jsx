@@ -38,19 +38,19 @@ class Rainbow extends React.Component {
   }
 
   addRed() {
-    // your code here
+    this.props.router.push('/red');
   }
 
   addGreen() {
-    // your code here
+    this.props.router.push('/green');
   }
 
   addBlue() {
-    // your code here
+    this.props.router.push('/blue');
   }
 
   addViolet() {
-    // your code here
+    this.props.router.push('/violet');
   }
 }
 
@@ -64,10 +64,11 @@ const routes = (
     </Route>
 
     <Route path="green" component={Green} />
-      <Route path="blue" component={Blue}>
+
+    <Route path="blue" component={Blue}>
       <Route path="indigo" component={Indigo} />
     </Route>
-    
+
     <Route path="violet" component={Violet} />
   </Route>
 );
