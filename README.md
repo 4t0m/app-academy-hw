@@ -38,3 +38,4 @@
 + w7d2: React-Redux Middlewares Homework
 + w7d3: Giphys Search App
 + w7d4: React Router Homework
++ w7d5: UX Homework
